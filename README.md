@@ -41,7 +41,7 @@ To run the application locally:
 1. Clone or download .zip file
 2. cd into the folder `vital-frontend-task/backend`
 3. Install dependencies using `npm install`.
-4. cd into the folder `vital-frontend-task`
+4. go back to root (`cd ..`) or cd into the folder `vital-frontend-task`
 5. Install dependencies using `yarn install`.
 6. Obtain an API key or use the hardcoded sandbox one listed in the app.
 7. Run the application using `yarn start:app` (this will run both the backend and the frontend)
