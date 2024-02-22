@@ -1,5 +1,11 @@
+import { Button, Tooltip } from '@chakra-ui/react'
 import { Disclosure } from '@headlessui/react'
-import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/20/solid'
+import {
+  ChevronDownIcon,
+  ChevronUpIcon,
+  QueueListIcon,
+  Squares2X2Icon,
+} from '@heroicons/react/20/solid'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useMemo, useState } from 'react'
 import { Biomarker, FilterSelectTypes, Panel } from '../types'
@@ -41,23 +47,41 @@ const PanelList = ({ panels, biomarkers }: Props) => {
     <>
       {panels?.length > 0 && (
         <span className="isolate flex rounded-md justify-end pb-4">
-          <button
-            type="button"
-            className={`relative inline-flex items-center rounded-l-md bg-white px-3 py-2 text-sm text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10 ${
-              filter.cardView ? '!bg-gray-300' : ''
-            }`}
-            onClick={() => handleFilterSelect('card')}
+          <Tooltip
+            hasArrow
+            label="Card view"
+            placement="top"
+            className="p-2 rounded-md !text-sm !text-white !bg-[#2D3748]"
           >
-            Card View
-          </button>
-          <button
-            type="button"
-            className={`relative -ml-px inline-flex items-center rounded-r-md bg-white px-3 py-2 text-sm text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10
+            <Button
+              className={`relative inline-flex items-center rounded-l-md bg-white px-3 py-2 text-sm text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10 ${
+                filter.cardView ? '!bg-gray-300' : ''
+              }`}
+              onClick={() => handleFilterSelect('card')}
+            >
+              <Squares2X2Icon
+                className="h-5 w-5 text-gray-800"
+                aria-hidden="true"
+              />
+            </Button>
+          </Tooltip>
+          <Tooltip
+            hasArrow
+            label="List view"
+            placement="top"
+            className="p-2 rounded-md !text-sm !text-white !bg-[#2D3748]"
+          >
+            <Button
+              className={`relative -ml-px inline-flex items-center rounded-r-md bg-white px-3 py-2 text-sm text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10
           ${filter.listView ? '!bg-gray-300' : ''}`}
-            onClick={() => handleFilterSelect('list')}
-          >
-            List View
-          </button>
+              onClick={() => handleFilterSelect('list')}
+            >
+              <QueueListIcon
+                className="h-5 w-5 text-gray-800"
+                aria-hidden="true"
+              />
+            </Button>
+          </Tooltip>
         </span>
       )}
 

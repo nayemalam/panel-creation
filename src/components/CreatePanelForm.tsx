@@ -75,6 +75,7 @@ const CreatePanelForm = ({
           className="input input-bordered w-full p-2 border rounded foucs:ring-[#03A588] focus:ring-2 focus:ring-[#03A588] focus:ring-opacity-50 focus-visible:!ring-[#03A588] focus-visible:ring-2 focus-visible:ring-opacity-50 focus:outline-none"
           autoComplete="off"
           autoFocus
+          required
         />
         {fetchingCollectionMethods ? (
           <div className="cursor-not-allowed input input-bordered w-full p-2 border rounded border-transparent border-r-8 outline outline-[#e5e7eb] outline-1 flex items-center gap-4">
