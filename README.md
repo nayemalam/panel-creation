@@ -1,6 +1,9 @@
 # Vital Panel Creation Application ⚕️
 This application allows users to create panels consisting of biomarkers for lab testing. Users can select from a list of biomarkers, filter them, and create custom panels with a name, biomarkers, and a collection method.
 
+![image](https://github.com/nayemalam/panel-creation/assets/25883629/4e39b2f4-ebd3-48a0-a5b2-4dcdbcc5a852)
+
+
 ## Task
 1. List biomarkers:
    - fetches biomarkers from vital API (fetchBiomarkers) and stores them in state (biomarkers and filteredBiomarkers).
